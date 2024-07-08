@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viktor Klyn</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans+Narrow:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="headerSection">
+        <div class="logo-container">
+            <img src="./VK.jpg" alt="Foto de João Victor Klein" height="130" width="130">
+        </div>
+        <div class="name-container">
+            <span class="nome1">Viktor Klyn</span>
+            <span class="barra"></span>
+            <span class="nome2">Victor Klein</span>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="*Sem funcionalidades por enquanto...">
+            <button class="search-btn">Buscar</button>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/victor_klyn" target="_blank">
+                <img src="./pnginsta.webp" alt="Instagram" width="30" height="30">
+            </a>
+            <a href="https://github.com/ViktorKlyn" target="_blank">
+                <img src="./githubpng.jpeg" alt="GitHub" width="30" height="30">
+            </a>
+            <a href="https://www.linkedin.com/in/victor-klein-071b8b266" target="_blank">
+                <img src="./linkedinpng.png" alt="LinkedIn" width="30" height="30">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="introducao">
+            <h1>Sobre Mim</h1>
+            <h4>Me chamo João Victor Klein, tenho 17 anos e atualmente estou no 3º ano do Ensino Médio.
+                Desde 2023, desenvolvi um forte interesse pela programação e venho me dedicando para realizar
+                meu sonho de me tornar um programador profissional.
+                Durante esse tempo, tenho explorado diversas linguagens e tecnologias, buscando constantemente
+                expandir meus conhecimentos e habilidades.
+                <br>
+                <br>
+                Estou entusiasmado em iniciar minha carreira na área de tecnologia e estou me preparando ativamente para
+                conquistar meu primeiro emprego nesse campo. Acredito que a programação não é apenas uma habilidade, mas
+                sim
+                uma forma de expressar minha criatividade e resolver problemas de maneira eficiente.
+            </h4>
+        </section>
+
+        <div class="foto-container">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="frame">
+                <div class="carousel">
+                    <img src="./IMG_20230706_104145.jpg" alt="Foto 1">
+                    <img src="./IMG_20240605_174404.jpg" alt="Foto 2">
+                    <img src="./IMG_20240617_174720.jpg" alt="Foto 3">
+                    <img src="./IMG_20240621_182757.jpg" alt="Foto 4">
+                    <img src="./IMG_20240621_185341.jpg" alt="Foto 5">
+                </div>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const carousel = document.querySelector('.carousel');
+                const images = document.querySelectorAll('.carousel img');
+                const totalImages = images.length;
+                const imageWidth = images[0].clientWidth;
+                let index = 0;
+
+                document.querySelector('.prev').addEventListener('click', () => {
+                    if (index > 0) {
+                        index--;
+                    } else {
+                        index = totalImages - 1; // Voltar para a última imagem
+                    }
+                    carousel.style.transform = `translateX(${-index * imageWidth}px)`;
+                });
+
+                document.querySelector('.next').addEventListener('click', () => {
+                    if (index < totalImages - 1) {
+                        index++;
+                    } else {
+                        index = 0; // Voltar para a primeira imagem
+                    }
+                    carousel.style.transform = `translateX(${-index * imageWidth}px)`;
+                });
+            });
+
+        </script>
+
+        </section>
+        <section class="formacao">
+            <h1>Formação</h1>
+            <h4>Sempre busquei incessantemente por conhecimento para me capacitar no mercado de trabalho, especialmente
+                na vanguarda
+                da tecnologia. Meu objetivo é não apenas dominar as habilidades técnicas essenciais, mas também entender
+                como essas
+                habilidades podem ser aplicadas de maneira inovadora e impactante.
+                <br>
+                <br>
+                Ao longo do meu percurso educacional, tenho priorizado a exploração de diversas tecnologias e linguagens
+                de programação,
+                incluindo JavaScript, Python, HTML5, CSS3, Node.js, entre outras. Além disso, participei de cursos
+                especializados que me
+                proporcionaram um entendimento profundo de conceitos como desenvolvimento web, banco de dados e design
+                de interfaces.
+                <br>
+                <br>
+                Estou comprometido em manter-me atualizado com as últimas tendências e avanços na indústria, buscando
+                constantemente
+                novas oportunidades para aprimorar minhas habilidades e expandir meu conhecimento técnico. Acredito
+                firmemente que a
+                educação contínua e a experiência prática são fundamentais para alcançar o sucesso e fazer contribuições
+                significativas
+                no campo da tecnologia.
+            </h4>
+            <h2>Cursos Presenciais:</h2>
+            <table class="cursopresencial">
+                <thead>
+                    <tr>
+                        <th>Escola</th>
+                        <th>Curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mega Cursos</td>
+                        <td>Lógica de Programação Orientada a Objetos</td>
+                    </tr>
+                    <tr>
+                        <td>Mega Cursos</td>
+                        <td>Banco de Dados</td>
+                    </tr>
+                    <tr>
+                        <td>Mega Cursos</td>
+                        <td>Photoshop CC</td>
+                    </tr>
+                    <tr>
+                        <td>Mega Cursos</td>
+                        <td>Java Mod 1 & 2</td>
+                    </tr>
+                    <tr>
+                        <td>Mega Cursos</td>
+                        <td>PHP Laravel</td>
+                    </tr>
+                    <tr>
+                        <td>Micro Cursos</td>
+                        <td>Marketing Digital Mod 1 & 2</td>
+                    </tr>
+                    <tr>
+                        <td>Micro Cursos</td>
+                        <td>Montagem e Manutenção de Computadores</td>
+                    </tr>
+                    <tr>
+                        <td>Micro Cursos</td>
+                        <td>Informática Master</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Cursos Online:</h2>
+            <table class="cursoonline">
+                <thead>
+                    <tr>
+                        <th>Escola</th>
+                        <th>Curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Lógica de Programação com Javascript</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Node.JS</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Front-End</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Back-End</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>React</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Orientação a Objetos e Typescript</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Websockets</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Introdução ao C#</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Webcrawler</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Fundamentos de IA Generativa</td>
+                    </tr>
+                    <tr>
+                        <td>DodevSchool</td>
+                        <td>Prompt Engineering</td>
+                    </tr>
+                    <tr>
+                        <td>CEV</td>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td>CEV</td>
+                        <td>Banco de Dados MySQL</td>
+                    </tr>
+                    <tr>
+                        <td>Empowerdata</td>
+                        <td>Power BI Básico</td>
+                    </tr>
+                    <tr>
+                        <td>English Life</td>
+                        <td>Inglês Level B1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <hr>
+    <footer class="footer-container">
+        <div class="projetos">
+            <h4>Outros Projetos</h4>
+            <ul>
+                <li><a href="#">Projeto 1</a></li>
+                <li><a href="#">Projeto 2</a></li>
+                <li><a href="#">Projeto 3</a></li>
+            </ul>
+        </div>
+
+        <div class="design-info">
+            <p>Estilização e design feito por</p>
+            <img src="./novalogo.png" alt="Imagem do Rodapé" class="logo">
+        </div>
+
+        <div class="blocos">
+            <div class="bloco whatsapp">
+                <img src="./whatsapp-logo.png" alt="Whatsapp">
+                <p>Whatsapp: (65) 996977141 </p>
+            </div>
+            <div class="bloco email">
+                <img src="./email-logo.png" alt="Email">
+                <p>E-mail: e2348244@edu.mt.gov.br</p>
+            </div>
+            <div class="bloco messenger">
+                <img src="./mensanger-logo.png" alt="Messenger">
+                <p>Messenger: *Indisponível no momento</p>
+            </div>
+        </div>
+    </footer>
+    <section class="direitos">
+        <p>&copy; 2024 João Victor Klein. Todos os direitos reservados.</p>
+    </section>
+</body>
+
+</html>

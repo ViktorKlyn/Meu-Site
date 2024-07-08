@@ -1,0 +1,444 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+/* Cabeçalho */
+.headerSection {
+    background-color: #6dd56d;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+.logo-container img {
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Permite que o contêiner de nome cresça para preencher o espaço disponível */
+}
+
+.nome1, .nome2 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.nome1 {
+    font-family: 'Mr Dafoe', cursive;
+}
+
+.barra {
+    height: 40px;
+    width: 2px;
+    background-color: #fff;
+    margin: 0 15px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 70px; /* Margem ajustada para espaçar adequadamente */
+}
+
+.search-container input[type='text'] {
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.search-container input::placeholder {
+    text-align: left;
+}
+
+.search-btn {
+    background-color: #000000;
+    border: none; /* Remove borda */
+    padding: 9.7px 11px;
+    border-radius: 5px;
+    margin-left: 3px;
+    cursor: pointer;
+    color:#00ff08;
+    font-size: 1em;
+    outline: none;
+    transition: background-color 0.3s ease; /* Suaviza a transição da cor de fundo */
+}
+
+.search-btn:hover {
+    background-color: #007d00; /* Cor ao passar o mouse */
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaçamento entre os ícones */
+    margin-right: 50px; /* Ajustado para espaçar os ícones à esquerda da borda direita */
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/* Títulos */
+h1 {
+    color: #5aff60;
+    font-size: 2em;
+    background-color: #ffffff;
+    padding: 13px 40px;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+h4 {
+    font-size: 1.2em;
+    line-height: 1.6;
+    padding: 13px 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #00ff08;
+    color: #000000;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif, ;
+    font-style: italic;
+}
+
+
+
+.introducao {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+/* Seção de fotos */
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
+    width: 600px; /* Largura do contêiner de fotos */
+    height: 600px; /* Altura do contêiner de fotos */
+}
+
+.frame {
+    position: relative;
+    width: 550px; /* Ajustar para a largura correta */
+    height: 550px; /* Ajustar para a altura correta */
+    border: 3px solid #00ff08; /* Moldura fixa */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(550px * 5); /* Ajustar para o número de imagens, 5 é o exemplo */
+    height: 100%;
+}
+
+.carousel img {
+    width: 550px; /* Garantir que cada imagem ocupe 100% da largura do contêiner */
+    height: 100%;
+    object-fit: cover; /* Preencher todo o espaço do contêiner */
+    border: none; /* Remover a borda das imagens */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: -60px; /* Ajuste para posicionar fora do frame */
+}
+
+.next {
+    right: -60px; /* Ajuste para posicionar fora do frame */
+}
+
+
+
+/* Tabelas de cursos */
+.formacao {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 90px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.formacao h2 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.cursopresencial, .cursoonline {
+    width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.cursopresencial th, .cursopresencial td,
+.cursoonline th, .cursoonline td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+}
+
+.cursopresencial th, .cursoonline th {
+    background-color: #00ff08;
+    color: #000000;
+}
+
+
+
+/* Linha de separação */
+hr {
+    border: 0;
+    height: 1px;
+    background: #00ff08;
+    margin: 20px 0;
+    position: relative;
+    top: 20px; /* Ajuste para posicionar no meio das partes preta e branca */
+}
+
+
+
+/* Linha de separação */
+hr {
+    border: 0;
+    height: 3px;
+    background: #00ff08;
+    margin: 0;
+    position: relative;
+    top: -0px;
+}
+
+
+/* Linha de separação */
+hr {
+    border: 0;
+    height: 3px;
+    background: #00ff08;
+    margin: 0;
+}
+
+/* Container do rodapé */
+.footer-container {
+    background-color: #ffffff;
+    padding: 30px 20px; /* 30px de padding superior para espaçamento abaixo da linha de separação */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Bloco de projetos */
+.projetos {
+    width: 300px;
+    text-align: center; /* Centraliza os textos */
+    background-color: #ffffff;
+    margin-top: 30px; /* Espaçamento abaixo da linha de separação */
+    margin-left: 50px;
+}
+
+.projetos h4, .bloco h4 {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.projetos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projetos ul li {
+    margin-bottom: 20px;
+}
+
+.projetos ul li a {
+    color: #5c895c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.projetos ul li a:hover {
+    color: #00ff08;
+}
+
+/* Design Info */
+.design-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 300px;
+    margin-top: 30px; /* Espaçamento abaixo da linha de separação */
+}
+
+.design-info .logo {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.design-info p {
+    color: #000000;
+    font-size: 1.8em;
+    text-align: center;
+    background-color: #00ff08; /* Fundo semi-transparente para legibilidade */
+    padding: 15px; /* Espaçamento interno do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 250px;
+    margin-bottom: 20px; /* Espaçamento inferior */
+    margin-top: 0px;
+    font-family: 'Cookie';
+}
+
+/* Blocos */
+.blocos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #ffffff;
+    width: 300px;
+    margin-top: 30px; /* Espaçamento abaixo da linha de separação */
+    margin-right: 50px;
+}
+
+.bloco {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #00ff08;
+    text-align: center; /* Centraliza o texto dentro dos blocos */
+    margin-top: 0px;
+    position: relative; /* Necessário para o efeito hover */
+    height: 50px; /* Ajuste a altura conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloco p {
+    margin: 0;
+    color: #333333;
+    font-size: 0.9em;
+    transition: opacity 0.3s; /* Transição suave para o efeito de texto */
+    opacity: 0; /* Inicialmente oculto */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bloco img {
+    height: 30px;
+    width: auto;
+    transition: opacity 0.3s; /* Transição suave para o efeito de imagem */
+}
+
+/* Efeitos de hover */
+.bloco:hover img {
+    opacity: 0; /* Oculta a imagem */
+}
+
+.bloco.whatsapp:hover p {
+    content: "WhatsApp: (xx) xxxx-xxxx";
+    opacity: 1; /* Mostra o texto */
+    color: #ffffff;
+    font-family: 'Oswald';
+    font-size: 1em;
+}
+
+.bloco.email:hover p {
+    content: "Email: exemplo@dominio.com";
+    opacity: 1; /* Mostra o texto */
+    color: #ffffff;
+    font-family: 'Oswald';
+    font-size: 1em;
+}
+
+.bloco.messenger:hover p {
+    content: "Messenger: facebook.com/exemplo";
+    opacity: 1; /* Mostra o texto */
+    color: #ffffff;
+    font-family: 'Oswald';
+    font-size: 1em;
+}
+
+
+
+
+
+
+.direitos {
+    text-align: center;
+}
+.direitos p {
+    text-align: center;
+}
+
+
+
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
