@@ -173,7 +173,7 @@ h4 {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: calc(550px * 5); /* Ajustar para o número de imagens, 5 é o exemplo */
+    width: calc(550px * 10); /* Ajustar para o número de imagens, 5 é o exemplo */
     height: 100%;
 }
 
@@ -288,38 +288,105 @@ hr {
     align-items: flex-start;
 }
 
+/* Container do rodapé */
+.footer-container {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Container do rodapé */
+.footer-container {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 /* Bloco de projetos */
 .projetos {
     width: 300px;
-    text-align: center; /* Centraliza os textos */
-    background-color: #ffffff;
-    margin-top: 30px; /* Espaçamento abaixo da linha de separação */
+    margin-top: 30px;
     margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens dentro do contêiner */
 }
 
-.projetos h4, .bloco h4 {
+.projetos h4 {
     font-size: 1.2em;
+    width: 250px;
     color: #000000;
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 10px;
 }
 
 .projetos ul {
     list-style-type: none;
     padding: 0;
+    width: 100%; /* Garante que a lista ocupe toda a largura do contêiner */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .projetos ul li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 30px; /* Ajuste conforme necessário */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro do item da lista */
 }
 
-.projetos ul li a {
-    color: #5c895c;
+/* Efeito hover para os projetos */
+.projeto {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    font-family: 'Oswald';
+    font-size: 1.1em;
+}
+
+.nome-projeto, .link-projeto {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.nome-projeto {
+    opacity: 1;
+    z-index: 1;
+}
+
+.link-projeto {
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none; /* Previne que o link seja clicável quando não visível */
+    color: #00ff00;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-.projetos ul li a:hover {
-    color: #00ff08;
+.projeto:hover .nome-projeto {
+    opacity: 0;
 }
+
+.projeto:hover .link-projeto {
+    opacity: 1;
+    pointer-events: auto; /* Permite que o link seja clicável quando visível */
+}
+
+
 
 /* Design Info */
 .design-info {
@@ -327,7 +394,7 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     width: 300px;
     margin-top: 30px; /* Espaçamento abaixo da linha de separação */
 }
@@ -335,7 +402,7 @@ hr {
 .design-info .logo {
     width: 200px;
     height: auto;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .design-info p {
@@ -346,7 +413,7 @@ hr {
     padding: 15px; /* Espaçamento interno do texto */
     border-radius: 10px; /* Bordas arredondadas */
     width: 250px;
-    margin-bottom: 20px; /* Espaçamento inferior */
+    margin-bottom: 10px; /* Espaçamento inferior */
     margin-top: 0px;
     font-family: 'Cookie';
 }
@@ -355,7 +422,7 @@ hr {
 .blocos {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     background-color: #ffffff;
     width: 300px;
     margin-top: 30px; /* Espaçamento abaixo da linha de separação */
@@ -366,6 +433,7 @@ hr {
     padding: 5px;
     border-radius: 10px;
     background-color: #00ff08;
+    width: 250px;
     text-align: center; /* Centraliza o texto dentro dos blocos */
     margin-top: 0px;
     position: relative; /* Necessário para o efeito hover */
@@ -382,6 +450,7 @@ hr {
     transition: opacity 0.3s; /* Transição suave para o efeito de texto */
     opacity: 0; /* Inicialmente oculto */
     position: absolute;
+    width: 250px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
